@@ -7,7 +7,7 @@
     </van-empty>
     <!-- <component :is="!loading && RefreshCard"></component> -->
     <RefreshCard v-if="!loading"></RefreshCard>
-    <van-button type="primary">主要按钮</van-button>
+    <van-button type="primary">主要按钮66</van-button>
   </div>
 </template>
 <script lang="ts" setup>
