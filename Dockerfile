@@ -5,13 +5,13 @@ WORKDIR /app
 # 如果我们把package*.json和代码程序一起拷贝，如果我们只更改了代码而没有新增依赖，但docker仍然会安装依赖；但是我们如果把它单独拿出来的话，就能够提高缓存的命中率。
 COPY package.json ./
 
-RUN npm install yarn -g
+# RUN npm install yarn -g
 
-RUN yarn install
+RUN npm i
 
 COPY . .
 
-RUN yarn build
+RUN npm build
 
 FROM nginx:latest as serve
 
